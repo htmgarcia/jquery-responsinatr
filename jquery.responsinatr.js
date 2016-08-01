@@ -12,11 +12,11 @@
 
         // Default options
         var settings = $.extend({
-            class: 'responsinatr'
+            selector: '.responsinatr'
         }, options );
 
         $(window).resize(function() {
-            $(settings.class).each(function() {
+            $(settings.selector).each(function() {
 
                 // Calculate old and new width/height values
                 var $oldHeight  =  $(this).find('iframe').attr('height');   // Get iframe's height
