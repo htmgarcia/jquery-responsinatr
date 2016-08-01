@@ -1,0 +1,13 @@
+body {
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#container {
+    background: #fff;
+    color: #555;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 880px;
+    display: block;
+}
