@@ -13,7 +13,7 @@
         // Default options
         var settings = $.extend({
             target:         'iframe',
-            wrapperClass:   'responsinatr'
+            wrapperClass:   '.responsinatr'
         }, options );
 
         $(document).load(function(){
@@ -22,11 +22,11 @@
 
                 // Wrap each iframe
                 $(this).wrap(
-                    '<div class="' + settings.wrapperClass + '"></div>'
+                    '<div class="' + text.replace(settings.wrapperClass, '.') + '"></div>'
                 );
-                console.log('wrapper class added!');
 
             });
+            console.log('wrapper class added!');
 
         });
 
@@ -35,13 +35,13 @@
             $(settings.target).each(function() {
 
                 // Calculate old and new width/height values
-                var $oldHeight  =  $(settings.target).attr('height');                  // Get iframe's height
-                var $oldWidth   =  $(settings.target).attr('width');                   // Get iframe's width
-                var $newWidth   =  $(settings.target).parent().width();                // Get wrapper's width
+                var $oldHeight  =  $(settings.target).attr('height');       // Get iframe's height
+                var $oldWidth   =  $(settings.target).attr('width');        // Get iframe's width
+                var $newWidth   =  $(settings.target).parent().width();     // Get wrapper's width
                 var $newHeight  =  ($oldHeight / $oldWidth) * $newWidth;    // Calculate new height
 
                 // Apply new width/height values keeping aspect ratio
-                $('.' + settings.wrapperClass).find('iframe').css({
+                $(settings.wrapperClass).find('iframe').css({
                     "height"    : $newHeight + "px",
                     "width"     : $newWidth  + "px"
                 });
@@ -49,7 +49,7 @@
 
             });
 
-        });
+        }).resize();
 
     };
 
