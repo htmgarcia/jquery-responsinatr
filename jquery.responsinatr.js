@@ -18,7 +18,7 @@
 
         $(document).load(function(){
 
-            $(settings.selector).each(function() {
+            $(settings.target).each(function() {
 
                 // Wrap each iframe
                 $(this).wrap(
