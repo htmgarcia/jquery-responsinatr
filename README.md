@@ -1,3 +1,7 @@
+# jQuery Responsinatr Demo
+
+[See the demo in action here](http://joomlatemplat.es/jquery-responsinatr/) - resize the browser to see how the embeds adapt to the screensize.
+
 # How to use jQuery Responsinatr
 
 ## Load jQuery

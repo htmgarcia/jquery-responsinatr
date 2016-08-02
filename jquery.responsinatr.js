@@ -1,5 +1,5 @@
 /*
- * jQuery Responsinatr 0.0.1
+ * jQuery Responsinatr 0.0.2
  * Copyright 2016 JoomlaTemplat.es
  * GNU General Public License version 3; see LICENSE.txt
  * http://joomlatemplat.es/
@@ -13,24 +13,25 @@
         // Default options
         var settings = $.extend({
             target:         'iframe',
-            wrapperClass:   '.responsinatr'
+            wrapperClass:   'responsinatr'
         }, options );
 
-        $(document).load(function(){
+
+        $(window).on('load', function() {
 
             $(settings.target).each(function() {
 
                 // Wrap each iframe
                 $(this).wrap(
-                    '<div class="' + text.replace(settings.wrapperClass, '.') + '"></div>'
+                    '<div class="' + settings.wrapperClass + '"></div>'
                 );
+                console.log('wrapper class added!');
 
             });
-            console.log('wrapper class added!');
 
         });
 
-        $(window).resize(function() {
+        $(window).on('load resize', function() {
 
             $(settings.target).each(function() {
 
@@ -41,7 +42,7 @@
                 var $newHeight  =  ($oldHeight / $oldWidth) * $newWidth;    // Calculate new height
 
                 // Apply new width/height values keeping aspect ratio
-                $(settings.wrapperClass).find('iframe').css({
+                $('.' + settings.wrapperClass).find('iframe').css({
                     "height"    : $newHeight + "px",
                     "width"     : $newWidth  + "px"
                 });
