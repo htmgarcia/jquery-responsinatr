@@ -28,4 +28,4 @@ $(function(){
 
 ## Report bugs
 
-If you detect a bug or have feedback to improve **jQuery Responsinatr** plugin, please [report it here](https://github.com/htmgarcia/jquery-responsinatr/issues/).
+If you detect a bug or have feedback to improve **jQuery Responsinatr** plugin, please [post it here](https://github.com/htmgarcia/jquery-responsinatr/issues/).
