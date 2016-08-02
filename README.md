@@ -18,12 +18,6 @@ Load **jQuery Responsinatr** plugin just after jQuery:
 
 `<script src="/path/to/jquery.responsinatr.min.js"></script>`
 
-## Load jQuery Responsinatr CSS
-
-Load **jQuery Responsinatr** CSS inside the head tag:
-
-`<link href="/path/to/jquery.responsinatr.css" rel="stylesheet" type="text/css"/>`
-
 ## Execute Responsinatr
 
 Just below the call to Responsinatr, execute the plugin using the code below; optionally replace 'body' with a specific selector.
