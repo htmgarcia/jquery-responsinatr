@@ -12,7 +12,7 @@ Note: at the time of writing this, the plugin has been tested in jQuery 2.1.4+
 
 Load **jQuery Responsinatr** plugin just after jQuery:
 
-`<script src="/path/to/jquery.responsinatr.js"></script>`
+`<script src="/path/to/jquery.responsinatr.min.js"></script>`
 
 ## Execute Responsinatr
 
