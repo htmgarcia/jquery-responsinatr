@@ -18,11 +18,13 @@ Load **jQuery Responsinatr** plugin just after jQuery:
 
 Just below the call to Responsinatr, execute the plugin using the code below; optionally replace 'body' with a specific selector.
 
-```<script>
+```
+<script>
 $(function(){
     $('body').responsinatr();
 });
-</script>```
+</script>
+```
 
 ## Report bugs
 
