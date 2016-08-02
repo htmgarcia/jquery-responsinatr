@@ -3,6 +3,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+h2 {
+    font-weight: 400;
+}
+
 #container {
     background: #fff;
     color: #555;
@@ -10,4 +14,16 @@ body {
     margin: 40px auto;
     max-width: 880px;
     display: block;
+}
+
+@media (max-width: 979px) {
+    #container {
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 480px) {
+    #container {
+        max-width: 75%;
+    }
 }
