@@ -8,30 +8,49 @@
 (function ($)
 {
 
-    $.fn.responsinatr = function( options ) {
+    $.fn.responsinatr = function(options) {
 
         // Default options
         var settings = $.extend({
-            selector: '.responsinatr'
+            target:         'iframe',
+            wrapperClass:   'responsinatr'
         }, options );
 
-        $(window).resize(function() {
+        $(document).load(function(){
+
             $(settings.selector).each(function() {
 
+                // Wrap each iframe
+                $(this).wrap(
+                    '<div class="' + settings.wrapperClass + '"></div>'
+                );
+                console.log('wrapper class added!');
+
+            });
+
+        });
+
+        $(window).resize(function() {
+
+            $(settings.target).each(function() {
+
                 // Calculate old and new width/height values
-                var $oldHeight  =  $(this).find('iframe').attr('height');   // Get iframe's height
-                var $oldWidth   =  $(this).find('iframe').attr('width');    // Get iframe's width
-                var $newWidth   =  $(this).width();                         // Get wrapper's width
-                var $newHeight  = ($oldHeight/$oldWidth) * $newWidth;       // Calculate new height
+                var $oldHeight  =  $(settings.target).attr('height');                  // Get iframe's height
+                var $oldWidth   =  $(settings.target).attr('width');                   // Get iframe's width
+                var $newWidth   =  $(settings.target).parent().width();                // Get wrapper's width
+                var $newHeight  =  ($oldHeight / $oldWidth) * $newWidth;    // Calculate new height
 
                 // Apply new width/height values keeping aspect ratio
-                $(this).find('iframe').css({
-                    "height" : $newHeight + "px",
-                    "width" : $newWidth + "px"
+                $('.' + settings.wrapperClass).find('iframe').css({
+                    "height"    : $newHeight + "px",
+                    "width"     : $newWidth  + "px"
                 });
+                console.log('height/width values added!');
+
             });
+
         });
 
     };
 
-}( jQuery ));
+}(jQuery));
