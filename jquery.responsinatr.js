@@ -1,5 +1,5 @@
 /*
- * jQuery Responsinatr 0.0.1
+ * jQuery Responsinatr 0.0.2
  * Copyright 2016 JoomlaTemplat.es
  * GNU General Public License version 3; see LICENSE.txt
  * http://joomlatemplat.es/
