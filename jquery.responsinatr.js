@@ -16,7 +16,6 @@
             wrapperClass:   'responsinatr'
         }, options );
 
-
         $(window).on('load', function() {
 
             $(settings.target).each(function() {
@@ -50,7 +49,7 @@
 
             });
 
-        }).resize();
+        });
 
     };
 
