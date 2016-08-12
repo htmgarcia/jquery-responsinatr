@@ -20,12 +20,24 @@ Load **jQuery Responsinatr** plugin just after jQuery:
 
 ## Execute Responsinatr
 
-Just below the call to Responsinatr, execute the plugin using the code below; optionally replace 'body' with a specific selector.
+Just below the call to Responsinatr, execute the plugin using the code below.
 
 ```
 <script>
 $(function(){
     $('body').responsinatr();
+});
+</script>
+```
+
+To add responsive support to the iframes inside a specific container, define a **target** as follows: 
+
+```
+<script>
+$(function(){
+    $('body').responsinatr({
+        target: '#container-id iframe'
+    });
 });
 </script>
 ```
