@@ -1,3 +1,7 @@
+# jQuery Responsinatr Demo
+
+[See the demo in action here](https://htmgarcia.com/jquery-responsinatr/) - resize the browser to see how the embeds adapt to the screensize.
+
 # How to use jQuery Responsinatr
 
 ## Load jQuery
@@ -26,7 +30,7 @@ $(function(){
 </script>
 ```
 
-To add responsive support to the iframes inside a specific container, define a **target** as follows: 
+To add responsive support to the iframes inside a specific container, define a **target** as follows:
 
 ```
 <script>
